@@ -219,6 +219,44 @@ public class VistaListarTareas {
             }
         });
 
+        //Boton filtrar opciones
+        jbFiltrar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                vistaGeneral.controlador.filtrarTareas();
+            }
+        });
+
+       jbCompletada.addActionListener(new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent e) {
+               if (jbNoCompletada.isSelected() || jbTodasCompl.isSelected()){
+                   jbCompletada.setSelected(false);
+               }
+           }
+       });
+       jbNoCompletada.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (jbCompletada.isSelected() || jbTodasCompl.isSelected()){
+                    jbNoCompletada.setSelected(false);
+                }
+            }
+       });
+       jbTodasCompl.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (jbNoCompletada.isSelected() || jbNoCompletada.isSelected()){
+                    jbTodasCompl.setSelected(false);
+                }
+            }
+       });
+
+
+
+
+
+
     }
 
 }

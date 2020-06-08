@@ -45,4 +45,8 @@ public interface InterfaceModelo {
     String mostararPrioridadSeleccionada(int cod_tarea);
 
     int getSize();
+
+
+
+    void filtrar(String completadas, String prioridad);
 }

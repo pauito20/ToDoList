@@ -47,5 +47,12 @@ public interface InterfaceVista {
     void actualizaTabla();
 
 
+    void actualizaFiltrado(List<Tarea> filtradas);
+
     void setDatosTarea(int cod_tarea);
+
+    //Metodos Para Filtrar Tareas
+    String isListarCompletadas();
+
+    String listarTipoPrioridad();
 }

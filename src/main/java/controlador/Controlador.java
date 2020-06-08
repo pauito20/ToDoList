@@ -45,5 +45,13 @@ public class Controlador implements InterfaceControlador{
         modelo.borraTarea(cod_tarea);
     }
 
+    @Override
+    public void filtrarTareas() {
+        String completada = vista.isListarCompletadas();
+        String prioridad = vista.listarTipoPrioridad();
+
+        modelo.filtrar(completada,prioridad);
+    }
+
 
 }

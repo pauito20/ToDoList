@@ -1,9 +1,7 @@
 package vista;
 
-import controlador.Controlador;
 import controlador.InterfaceControlador;
 import modelo.InterfaceModelo;
-import modelo.Modelo;
 import modelo.ModeloTabla;
 import modelo.Tarea;
 
@@ -15,7 +13,6 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.Serializable;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 public class VistaGeneral implements InterfaceVista{
 
@@ -184,6 +181,12 @@ public class VistaGeneral implements InterfaceVista{
         vistaListarTareas.tabla.setModel(modelo_tabla);
         modelo_tabla.fireTableDataChanged();
     }
+    @Override
+    public void actualizaFiltrado(List<Tarea> filtradas){
+        ModeloTabla modelo_tabla = new ModeloTabla(filtradas);
+        vistaListarTareas.tabla.setModel(modelo_tabla);
+        modelo_tabla.fireTableDataChanged();
+    }
 
     @Override
     public void setDatosTarea(int cod_tarea){
@@ -210,6 +213,26 @@ public class VistaGeneral implements InterfaceVista{
             }
         }
 
+    }
+
+
+    //Metodos Para Filtrar Tareas
+    @Override
+    public String isListarCompletadas(){
+        String filtroCompletas;
+        if (vistaListarTareas.jbCompletada.isSelected())
+            filtroCompletas = "Completadas";
+        else if (vistaListarTareas.jbNoCompletada.isSelected())
+            filtroCompletas = "NoCompletadas";
+        else
+            filtroCompletas = "Todas";
+
+        return filtroCompletas;
+    }
+
+    @Override
+    public String listarTipoPrioridad(){
+        return (String) vistaListarTareas.cbPrioridad.getSelectedItem();
     }
 
 

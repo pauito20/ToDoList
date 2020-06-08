@@ -1,7 +1,8 @@
 package modelo;
 
+import modelo.filtrado.completada.*;
+import modelo.filtrado.prioridad.*;
 import vista.InterfaceVista;
-import vista.VistaGeneral;
 
 import java.io.*;
 import java.util.HashMap;
@@ -144,6 +145,45 @@ public class Modelo implements InterfaceModelo, Serializable {
     @Override
     public int getSize() {
         return toDoList.size();
+    }
+
+    @Override
+    public void  filtrar(String completadas, String prioridad) {
+
+        List<Tarea> dev;
+
+        //En Cuanto si esta o no Completada o elegimos Todas
+        if (completadas.equals("Completadas")){
+            FiltroCompletadas filtroCompletadas = new FiltroCompletadas();
+            dev = filtroCompletadas.listaTareasCompletadas(generaListaTareas());
+        }else if (completadas.equals("NoCompletadas")){
+            FiltroNoCompletadas filtroNoCompletadas = new FiltroNoCompletadas();
+            dev = filtroNoCompletadas.listaTareasCompletadas(generaListaTareas());
+        }else {
+            //Por defecto las tomaremos todas
+            FiltroTodasCompletadas filtroTodasCompletadas = new FiltroTodasCompletadas();
+            dev = filtroTodasCompletadas.listaTareasCompletadas(generaListaTareas());
+        }
+
+        //En cuanto a su prioridad
+        if (prioridad.equals("Alta")){
+            FiltroPrioridadAlta filtroPrioridadAlta = new FiltroPrioridadAlta();
+            dev.addAll(filtroPrioridadAlta.listaTareasPrioridad(generaListaTareas()));
+
+        }else if (prioridad.equals("Baja")){
+            FiltroPrioridadBaja filtroPrioridadBaja = new FiltroPrioridadBaja();
+            dev.retainAll(filtroPrioridadBaja.listaTareasPrioridad(generaListaTareas()));
+
+        }else if (prioridad.equals("Normal")){
+            FiltroPrioridadNormal filtroPrioridadNormal = new FiltroPrioridadNormal();
+            dev.retainAll(filtroPrioridadNormal.listaTareasPrioridad(generaListaTareas()));
+        }else {
+            FiltroPrioridadTodas filtroPrioridadTodas = new FiltroPrioridadTodas();
+            dev.retainAll(filtroPrioridadTodas.listaTareasPrioridad(generaListaTareas()));
+        }
+
+        vista.actualizaFiltrado(dev);
+
     }
 
 

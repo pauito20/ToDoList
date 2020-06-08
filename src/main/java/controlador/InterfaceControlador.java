@@ -18,4 +18,6 @@ public interface InterfaceControlador {
     void actualizaTarea();
 
     void borraTarea();
+
+    void filtrarTareas();
 }
