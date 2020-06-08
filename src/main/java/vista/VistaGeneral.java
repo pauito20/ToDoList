@@ -1,6 +1,7 @@
 package vista;
 
 import controlador.InterfaceControlador;
+import modelo.ExcepcionFilaNoSeleccionada;
 import modelo.InterfaceModelo;
 import modelo.ModeloTabla;
 import modelo.Tarea;
@@ -167,8 +168,12 @@ public class VistaGeneral implements InterfaceVista{
 
 
     @Override
-    public int getCodTareaSeleccionada() {
-        int cod_tarea = (Integer) vistaListarTareas.tabla.getValueAt(vistaListarTareas.tabla.getSelectedRow(),4);
+    public int getCodTareaSeleccionada() throws ExcepcionFilaNoSeleccionada {
+        int fila = vistaListarTareas.tabla.getSelectedRow();
+        if (fila == -1){
+            throw new ExcepcionFilaNoSeleccionada();
+        }
+        int cod_tarea = (Integer) vistaListarTareas.tabla.getValueAt(fila,4);
         return cod_tarea;
     }
     @Override

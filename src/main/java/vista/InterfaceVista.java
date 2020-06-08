@@ -2,6 +2,7 @@ package vista;
 
         import controlador.Controlador;
         import controlador.InterfaceControlador;
+        import modelo.ExcepcionFilaNoSeleccionada;
         import modelo.InterfaceModelo;
         import modelo.Modelo;
         import modelo.Tarea;
@@ -40,7 +41,7 @@ public interface InterfaceVista {
 
     String getPrioridadModificar();
 
-    int getCodTareaSeleccionada();
+    int getCodTareaSeleccionada() throws ExcepcionFilaNoSeleccionada;
 
     List<Tarea> getListaTareas();
 

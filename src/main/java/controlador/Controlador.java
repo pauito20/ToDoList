@@ -1,8 +1,11 @@
 package controlador;
 
 import modelo.ExcepcionCampoVacio;
+import modelo.ExcepcionFilaNoSeleccionada;
 import modelo.Modelo;
 import vista.VistaGeneral;
+
+import javax.swing.*;
 
 public class Controlador implements InterfaceControlador{
 
@@ -34,7 +37,17 @@ public class Controlador implements InterfaceControlador{
 
     @Override
     public void actualizaTarea() throws ExcepcionCampoVacio {
-        int cod_tare = vista.getCodTareaSeleccionada();
+        int cod_tare = 0;
+        try {
+            cod_tare = vista.getCodTareaSeleccionada();
+
+        } catch (ExcepcionFilaNoSeleccionada excepcionFilaNoSeleccionada) {
+            JOptionPane.showMessageDialog(new JFrame(),
+                    "No se ha seleccionado ninguna Tarea para actualizar. ",
+                    "Tarea no seleccionada",
+                    JOptionPane.WARNING_MESSAGE);
+        }
+
         String titulo = vista.getTituloListar();
         if (titulo.equals("")) {
             throw new ExcepcionCampoVacio();
@@ -48,7 +61,15 @@ public class Controlador implements InterfaceControlador{
 
     @Override
     public void borraTarea() {
-        int cod_tarea = vista.getCodTareaSeleccionada();
+        int cod_tarea = 0;
+        try {
+            cod_tarea = vista.getCodTareaSeleccionada();
+        } catch (ExcepcionFilaNoSeleccionada excepcionFilaNoSeleccionada) {
+            JOptionPane.showMessageDialog(new JFrame(),
+                    "No se ha seleccionado ninguna Tarea para borrar. ",
+                    "Tarea no seleccionada",
+                    JOptionPane.WARNING_MESSAGE);
+        }
         modelo.borraTarea(cod_tarea);
     }
 

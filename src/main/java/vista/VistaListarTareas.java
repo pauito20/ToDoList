@@ -1,9 +1,6 @@
 package vista;
 
-import modelo.ExcepcionCampoVacio;
-import modelo.Modelo;
-import modelo.ModeloTabla;
-import modelo.Tabla;
+import modelo.*;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -197,7 +194,12 @@ public class VistaListarTareas {
                 if (lsm.getMinSelectionIndex() == -1)
                     return;
                 //int fila = tabla.convertRowIndexToModel(tabla.getSelectedRow());
-                int cod_tarea = vistaGeneral.getCodTareaSeleccionada();
+                int cod_tarea = 0;
+                try {
+                    cod_tarea = vistaGeneral.getCodTareaSeleccionada();
+                } catch (ExcepcionFilaNoSeleccionada excepcionFilaNoSeleccionada) {
+                    excepcionFilaNoSeleccionada.printStackTrace();
+                }
                 //int cod_tarea = modeloTabla.getCodifoTareaModelo(fila);
                 vistaGeneral.setDatosTarea(cod_tarea);
 
@@ -217,6 +219,8 @@ public class VistaListarTareas {
                             "Campos vacíos",
                             JOptionPane.WARNING_MESSAGE);
                 }
+
+
             }
         });
 
@@ -254,7 +258,7 @@ public class VistaListarTareas {
        jbTodasCompl.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (jbNoCompletada.isSelected() || jbNoCompletada.isSelected()){
+                if (jbNoCompletada.isSelected() || jbCompletada.isSelected()){
                     jbTodasCompl.setSelected(false);
                 }
             }

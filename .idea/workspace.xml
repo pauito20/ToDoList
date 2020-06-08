@@ -2,29 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fffeab80-2ae6-4f84-852a-671d07fee9ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/modelo/ExcepcionCampoVacio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/modelo/ExcepcionFilaNoSeleccionada.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista_tareas.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lista_tareas.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controlador/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controlador/InterfaceControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controlador/InterfaceControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Modelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Modelo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vista/VistaAñadirTarea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vista/VistaAñadirTarea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vista/InterfaceVista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vista/InterfaceVista.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vista/VistaGeneral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vista/VistaGeneral.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vista/VistaListarTareas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vista/VistaListarTareas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controlador/Controlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controlador/Controlador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controlador/InterfaceControlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controlador/InterfaceControlador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/modelo/Modelo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/modelo/Modelo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vista/VistaAñadirTarea$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vista/VistaAñadirTarea$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vista/VistaAñadirTarea$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vista/VistaAñadirTarea$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vista/VistaAñadirTarea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vista/VistaAñadirTarea.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vista/VistaGeneral$EscuchadorCerrarVentana$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vista/VistaGeneral$EscuchadorCerrarVentana$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vista/VistaGeneral$EscuchadorCerrarVentana$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vista/VistaGeneral$EscuchadorCerrarVentana$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vista/VistaGeneral$EscuchadorCerrarVentana$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vista/VistaGeneral$EscuchadorCerrarVentana$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vista/VistaGeneral$EscuchadorCerrarVentana.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vista/VistaGeneral$EscuchadorCerrarVentana.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vista/VistaGeneral.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vista/VistaGeneral.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vista/VistaListarTareas$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vista/VistaListarTareas$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vista/VistaListarTareas$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vista/VistaListarTareas$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vista/VistaListarTareas$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vista/VistaListarTareas$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/vista/VistaListarTareas$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vista/VistaListarTareas$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/vista/VistaListarTareas$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vista/VistaListarTareas$5.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/vista/VistaListarTareas$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vista/VistaListarTareas$6.class" afterDir="false" />
@@ -143,39 +126,39 @@
     <state x="2213" y="76" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/-1920.-180.1920.1080/1440.-180.1920.1080@1440.-180.1920.1080" timestamp="1591592321571" />
     <state x="2213" y="76" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877/-1920.-157.1920.1057/1440.-180.1920.1080@1440.-180.1920.1080" timestamp="1591548962392" />
     <state x="2213" y="166" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877/1440.-85.1920.1057@1440.-85.1920.1057" timestamp="1591610330099" />
-    <state width="1398" height="234" key="GridCell.Tab.0.bottom" timestamp="1591630887149">
+    <state width="1398" height="234" key="GridCell.Tab.0.bottom" timestamp="1591653806915">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1878" height="294" key="GridCell.Tab.0.bottom/0.0.1440.900/-1920.-180.1920.1080/1440.-180.1920.1080@1440.-180.1920.1080" timestamp="1591593890327" />
     <state width="1878" height="293" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.-108.1920.1080@1440.-108.1920.1080" timestamp="1591615007804" />
-    <state width="1398" height="234" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1591630887149" />
+    <state width="1398" height="234" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1591653806915" />
     <state width="1878" height="366" key="GridCell.Tab.0.bottom/0.23.1440.877/-1920.-157.1920.1057/1440.-180.1920.1080@1440.-180.1920.1080" timestamp="1591563985266" />
     <state width="1878" height="293" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.-108.1920.1080@1440.-108.1920.1080" timestamp="1591614714473" />
     <state width="1878" height="279" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.-85.1920.1057@1440.-85.1920.1057" timestamp="1591611484444" />
-    <state width="1398" height="234" key="GridCell.Tab.0.center" timestamp="1591630887148">
+    <state width="1398" height="234" key="GridCell.Tab.0.center" timestamp="1591653806914">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1878" height="294" key="GridCell.Tab.0.center/0.0.1440.900/-1920.-180.1920.1080/1440.-180.1920.1080@1440.-180.1920.1080" timestamp="1591593890323" />
     <state width="1878" height="293" key="GridCell.Tab.0.center/0.0.1440.900/1440.-108.1920.1080@1440.-108.1920.1080" timestamp="1591615007803" />
-    <state width="1398" height="234" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1591630887148" />
+    <state width="1398" height="234" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1591653806914" />
     <state width="1878" height="366" key="GridCell.Tab.0.center/0.23.1440.877/-1920.-157.1920.1057/1440.-180.1920.1080@1440.-180.1920.1080" timestamp="1591563985263" />
     <state width="1878" height="293" key="GridCell.Tab.0.center/0.23.1440.877/1440.-108.1920.1080@1440.-108.1920.1080" timestamp="1591614714471" />
     <state width="1878" height="279" key="GridCell.Tab.0.center/0.23.1440.877/1440.-85.1920.1057@1440.-85.1920.1057" timestamp="1591611484443" />
-    <state width="1398" height="234" key="GridCell.Tab.0.left" timestamp="1591630887147">
+    <state width="1398" height="234" key="GridCell.Tab.0.left" timestamp="1591653806914">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1878" height="294" key="GridCell.Tab.0.left/0.0.1440.900/-1920.-180.1920.1080/1440.-180.1920.1080@1440.-180.1920.1080" timestamp="1591593890320" />
     <state width="1878" height="293" key="GridCell.Tab.0.left/0.0.1440.900/1440.-108.1920.1080@1440.-108.1920.1080" timestamp="1591615007802" />
-    <state width="1398" height="234" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1591630887147" />
+    <state width="1398" height="234" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1591653806914" />
     <state width="1878" height="366" key="GridCell.Tab.0.left/0.23.1440.877/-1920.-157.1920.1057/1440.-180.1920.1080@1440.-180.1920.1080" timestamp="1591563985262" />
     <state width="1878" height="293" key="GridCell.Tab.0.left/0.23.1440.877/1440.-108.1920.1080@1440.-108.1920.1080" timestamp="1591614714470" />
     <state width="1878" height="279" key="GridCell.Tab.0.left/0.23.1440.877/1440.-85.1920.1057@1440.-85.1920.1057" timestamp="1591611484442" />
-    <state width="1398" height="234" key="GridCell.Tab.0.right" timestamp="1591630887148">
+    <state width="1398" height="234" key="GridCell.Tab.0.right" timestamp="1591653806915">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1878" height="294" key="GridCell.Tab.0.right/0.0.1440.900/-1920.-180.1920.1080/1440.-180.1920.1080@1440.-180.1920.1080" timestamp="1591593890325" />
     <state width="1878" height="293" key="GridCell.Tab.0.right/0.0.1440.900/1440.-108.1920.1080@1440.-108.1920.1080" timestamp="1591615007803" />
-    <state width="1398" height="234" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1591630887148" />
+    <state width="1398" height="234" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1591653806915" />
     <state width="1878" height="366" key="GridCell.Tab.0.right/0.23.1440.877/-1920.-157.1920.1057/1440.-180.1920.1080@1440.-180.1920.1080" timestamp="1591563985265" />
     <state width="1878" height="293" key="GridCell.Tab.0.right/0.23.1440.877/1440.-108.1920.1080@1440.-108.1920.1080" timestamp="1591614714472" />
     <state width="1878" height="279" key="GridCell.Tab.0.right/0.23.1440.877/1440.-85.1920.1057@1440.-85.1920.1057" timestamp="1591611484443" />
@@ -205,10 +188,11 @@
     <state x="1936" y="-53" key="SettingsEditor/0.0.1440.900/-1920.-180.1920.1080/1440.-180.1920.1080@1440.-180.1920.1080" timestamp="1591434577674" />
     <state x="1622" y="-15" key="SettingsEditor/0.0.1440.900/1440.-108.1920.1080@1440.-108.1920.1080" timestamp="1591614108418" />
     <state x="1936" y="-53" key="SettingsEditor/0.23.1440.877/-1920.-157.1920.1057/1440.-180.1920.1080@1440.-180.1920.1080" timestamp="1591434663393" />
-    <state x="2573" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1591352917447">
-      <screen x="1440" y="-180" width="1920" height="1080" />
+    <state x="794" y="308" key="com.intellij.ide.util.TipDialog" timestamp="1591652634747">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="2573" y="189" key="com.intellij.ide.util.TipDialog/0.0.1440.900/-1920.-180.1920.1080/1440.-180.1920.1080@1440.-180.1920.1080" timestamp="1591352917447" />
+    <state x="794" y="308" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1591652634747" />
     <state x="2573" y="276" key="com.intellij.ide.util.TipDialog/0.23.1440.877/1440.-85.1920.1057@1440.-85.1920.1057" timestamp="1591271111232" />
     <state x="2162" y="-16" key="refactoring.ChangeSignatureDialog" timestamp="1591550310088">
       <screen x="1440" y="-180" width="1920" height="1080" />
