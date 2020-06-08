@@ -168,7 +168,7 @@ public class Modelo implements InterfaceModelo, Serializable {
         //En cuanto a su prioridad
         if (prioridad.equals("Alta")){
             FiltroPrioridadAlta filtroPrioridadAlta = new FiltroPrioridadAlta();
-            dev.addAll(filtroPrioridadAlta.listaTareasPrioridad(generaListaTareas()));
+            dev.retainAll(filtroPrioridadAlta.listaTareasPrioridad(generaListaTareas()));
 
         }else if (prioridad.equals("Baja")){
             FiltroPrioridadBaja filtroPrioridadBaja = new FiltroPrioridadBaja();

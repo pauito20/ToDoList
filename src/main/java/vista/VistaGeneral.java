@@ -240,7 +240,7 @@ public class VistaGeneral implements InterfaceVista{
     private class EscuchadorCerrarVentana extends WindowAdapter implements Serializable{
         @Override
         public void windowClosing(WindowEvent e){
-            JFrame ventanaSalida = new JFrame("Cerrar aplicación");
+            final JFrame ventanaSalida = new JFrame("Cerrar aplicación");
             ventanaSalida.getContentPane().setBackground(Color.lightGray);
             JButton jbSalir = new JButton("Cerrar");
             jbSalir.addActionListener(new ActionListener() {
