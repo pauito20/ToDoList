@@ -1,5 +1,6 @@
 package controlador;
 
+import modelo.ExcepcionCampoVacio;
 import modelo.Modelo;
 import vista.VistaGeneral;
 
@@ -8,14 +9,14 @@ public interface InterfaceControlador {
 
     void setModelo(Modelo modelo);
 
-    void añadirTarea();
+    void añadirTarea() throws ExcepcionCampoVacio;
 
 
     //void actualizaTarea(int cod_tare);
 
     //void borraTarea(int cod_tarea);
 
-    void actualizaTarea();
+    void actualizaTarea() throws ExcepcionCampoVacio;
 
     void borraTarea();
 

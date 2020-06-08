@@ -117,6 +117,7 @@ public class VistaGeneral implements InterfaceVista{
 
     @Override
     public String getTituloAñadir() {
+        System.out.println(vistaAñadirTarea.jtTitulo.getText());
         return vistaAñadirTarea.jtTitulo.getText();
     }
 

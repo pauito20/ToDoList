@@ -1,5 +1,6 @@
 package vista;
 
+import modelo.ExcepcionCampoVacio;
 import modelo.Modelo;
 import modelo.ModeloTabla;
 import modelo.Tabla;
@@ -208,7 +209,14 @@ public class VistaListarTareas {
         jbActualizaTarea.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                vistaGeneral.controlador.actualizaTarea();
+                try {
+                    vistaGeneral.controlador.actualizaTarea();
+                } catch (ExcepcionCampoVacio excepcionCampoVacio) {
+                    JOptionPane.showMessageDialog(new JFrame(),
+                            "No pueden haber campos vacíos, por favor rellenelos. ",
+                            "Campos vacíos",
+                            JOptionPane.WARNING_MESSAGE);
+                }
             }
         });
 

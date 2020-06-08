@@ -47,11 +47,10 @@ public class Modelo implements InterfaceModelo, Serializable {
     //Borra una Tarea
     @Override
     public void borraTarea(int cod_tarea){
-        String devolver;
+
         if (!toDoList.isEmpty()) {
             if (toDoList.containsKey(cod_tarea)) {
                 toDoList.remove(cod_tarea);
-                devolver = "La Tarea ha sido eliminada";
             }
         }
         vista.actualizaTabla();
@@ -64,7 +63,6 @@ public class Modelo implements InterfaceModelo, Serializable {
         String devolver;
         if (!toDoList.isEmpty()) {
             if (toDoList.containsKey(cod_tarea)) {
-                System.out.println(prioridad+titulo+descripcion+cod_tarea);
                 toDoList.get(cod_tarea).setPrioridad(prioridad);
                 toDoList.get(cod_tarea).setTitulo(titulo);
                 toDoList.get(cod_tarea).setDescripcion(descripcion);

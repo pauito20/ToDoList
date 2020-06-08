@@ -1,5 +1,6 @@
 package controlador;
 
+import modelo.ExcepcionCampoVacio;
 import modelo.Modelo;
 import vista.VistaGeneral;
 
@@ -19,8 +20,11 @@ public class Controlador implements InterfaceControlador{
     }
 
     @Override
-    public void añadirTarea() {
+    public void añadirTarea() throws ExcepcionCampoVacio {
         String titulo = vista.getTituloAñadir();
+        if (titulo.equals("")) {
+            throw new ExcepcionCampoVacio();
+        }
         String descripcion = vista.getDescripcionAñadir();
         String prioridad = vista.getPrioridadAñadir();
         boolean completada = vista.geatCompletadaAñadir();
@@ -29,9 +33,12 @@ public class Controlador implements InterfaceControlador{
     }
 
     @Override
-    public void actualizaTarea() {
+    public void actualizaTarea() throws ExcepcionCampoVacio {
         int cod_tare = vista.getCodTareaSeleccionada();
         String titulo = vista.getTituloListar();
+        if (titulo.equals("")) {
+            throw new ExcepcionCampoVacio();
+        }
         String descripcion = vista.getDescripcionListar();
         String prioridad = vista.getPrioridadModificar();
         boolean completada = vista.getCompletadaModificar();

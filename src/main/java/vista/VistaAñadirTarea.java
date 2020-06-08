@@ -1,5 +1,6 @@
 package vista;
 
+import modelo.ExcepcionCampoVacio;
 import modelo.ModeloTabla;
 
 import javax.swing.*;
@@ -124,7 +125,14 @@ public class VistaAñadirTarea {
         jbNuevaTarea.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                vistaGeneral.controlador.añadirTarea();
+                try {
+                    vistaGeneral.controlador.añadirTarea();
+                } catch (ExcepcionCampoVacio excepcionCampoVacio) {
+                    JOptionPane.showMessageDialog(new JFrame(),
+                            "No pueden haber campos vacíos, por favor rellenelos. ",
+                            "Campos vacíos",
+                            JOptionPane.WARNING_MESSAGE);
+                }
             }
         });
         
